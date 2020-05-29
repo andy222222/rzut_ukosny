@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+        <link rel="stylesheet" href="id_style.css" />
+        <link rel="stylesheet" href="general_style.css" />
+        <link rel="stylesheet" href="class_style.css" />
+        <link rel="shortcut icon" href="favicon.ico"/>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+        
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+    </head>
+    
+    <body onload="showSliderRange();showSliderValue();wykres()">
+        
+        <div id="tytulowe">
+             <h1 id="tytul">Rzut ukośny</h1>  
+        </div>
+           
+            <div id="wykresik">
+                    <canvas id="myChart" height="700" width="1400" style="display: block; width: 1400px; height: 700px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        
+            <div id="lewa">
+                
+                <div id="instrukcja">
+                    <p id="teksty">Program rysuje wykres rzutu ukośnego z zadanymi parametrami, oblicza również:</p>
+                    <ul>
+                        <li>zasięg,</li>
+                        <li>maksymalną wysokość,</li>
+                        <li>czas całkowity rzutu,</li>
+                        <li>a także czas od początku rzutu do osiągnięcia maksymalnej wysokości.</li>
+                    </ul>
+                    <p>Ustaw żądane parametry na suwakach i naciśnij przycisk Rysuj.</p>
+                    <p>Uwaga! Dla niektórych danych program może zawieszać przeglądarkę.</p>
+                    <p>Jeśli obok zasięgu rzutu i pozostałych parametrów znajduje się: brak rzutu, oznacza to, że dla zadanych parametrów ciało nie wzbija się ponad poziom gruntu (0 na osi pionowej). </p>
+                    <p>Kolejne punkty na wykresie wykonywane są w równych odstępach (0,01s) czasu.</p>
+                </div> 
+                
+                <div id="suwaczki">
+                    
+                    <div id="divSlider" class="divSlider1">
+                        <div class="divRow1">Przyspieszenie ziemskie&nbsp;<span id="slider1Val" class="val">9.81</span>&nbsp;m &middot; s<sup>-2</sup></div>
+                        <div class="divRow2">
+                            <span id="slider1Min" class="minmax">0.10</span><input type="range" min="0.1" max="25" step="0.01" value="9.81" id="slider1" name="slider" onchange="showSliderValue();" onmousemove="showSliderValue();"><span id="slider1Max" class="minmax">25.0</span>
+                        </div>
+                    </div>
+
+
+                    <div id="divSlider" class="divSlider2">
+                        <div class="divRow1">Szybkość początkowa&nbsp;<span id="slider2Val" class="val">25.00</span>&nbsp;m &middot; s<sup>-1</sup></div>
+                        <div class="divRow2">
+                            <span id="slider2Min" class="minmax">0.10</span><input type="range" min="0.10" max="250" step="0.01" value="25" id="slider2" name="slider" onchange="showSliderValue();" onmousemove="showSliderValue();"><span id="slider2Max" class="minmax">250</span>
+                        </div>
+                    </div>
+
+                    <div id="divSlider" class="divSlider3">
+                        <div class="divRow1">Kąt nachylenia do poziomu&nbsp;<span id="slider3Val" class="val">0.50</span>&nbsp;rad</div>
+                        <div class="divRow2">
+                            <span id="slider3Min" class="minmax">0.10</span><input type="range" min="0.1" max="1.57" step="0.01" value="0.5" id="slider3" name="slider" onchange="showSliderValue();" onmousemove="showSliderValue();"><span id="slider3Max" class="minmax">1.57</span>
+                        </div>
+                    </div>
+
+                    <div id="divSlider" class="divSlider4">
+                        <div class="divRow1">Współczynnik oporu ośrodka&nbsp;<span id="slider4Val" class="val">1.50</span>&nbsp;</div>
+                        <div class="divRow2">
+                            <span id="slider4Min" class="minmax">0.10</span><input type="range" min="0.10" max="5" step="0.01" value="1.50" id="slider4" name="slider" onchange="showSliderValue();" onmousemove="showSliderValue();"><span id="slider4Max" class="minmax">5.00</span>
+                        </div>
+                    </div>
+
+                    <div id="przyciski">
+                        <input type="button" value="Rysuj" onClick="odswiez(scatterChart);" />
+                    </div>
+
+                    <div id="wyniki">
+                        <p class="wynik">Zasięg rzutu:
+                        <input type="text" id="zasieg" readonly/><br></p>
+                        <p class="wynik">Maksymalna wysokość:
+                        <input type="text" id="maxwysokosc" readonly/></p>
+                        <p class="wynik">Całkowity czas rzutu:
+                        <input type="text" id="cc" readonly/></p>
+                        <p class="wynik">Czas od momentu rzutu do osiągnięcia maksymalnej wysokości:
+                        <input type="text" id="cmax" readonly/></p>
+                    </div>
+
+                </div>   
+            </div>
+    </body>
+    
+</html>

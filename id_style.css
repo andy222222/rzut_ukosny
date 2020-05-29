@@ -1,0 +1,62 @@
+#tytul{
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+            margin: 0 auto;
+}
+#tytulowe{
+            position: absolute; top: 0px;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            background-color: #09f;
+            padding: 0px;
+            margin: 0 auto;
+}
+#wykresik{
+            width:1400px;
+            position: absolute; right: 30px; top: 210px;
+}
+#divSlider {
+			font-family: sans-serif;
+			border: 1px solid #AAA;
+			width: 300px;
+			height: 50px;
+			background: #EEE;
+			margin: 2px;
+			padding: 5px;
+			box-shadow: 0 0 2px #CCC;
+			text-align: center;
+		}
+#przyciski  {
+            width: 200px;
+            position: relative; top: 30px;
+            margin: 0 auto;
+            }
+#wyniki{
+            width: 320px;
+            position: relative; top: 50px;
+            margin: 0 auto;
+            border-width: medium;
+            border-style: solid;
+            border-color: #09f;
+
+}
+#lewa{
+            position: relative; top: 42px;
+            background-color: #6cf;
+            height: 1020px;
+            width: 450px;
+            margin: 0px;
+}
+#instrukcja{
+    width: 380px;
+    margin: 0 auto;
+}
+#teksty{
+    position: relative; top: 20px;
+}
+#suwaczki{
+    width:315px;
+    position: relative; top: 30px;
+    margin: 0 auto;
+}

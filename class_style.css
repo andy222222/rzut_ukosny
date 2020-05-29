@@ -1,0 +1,32 @@
+.divRow1 {
+                --border: 1px solid #000;
+        }
+
+.divRow2 {
+                --border: 1px solid #000;
+        }
+
+.minmax {
+                font-size: 0.9em;
+                background-color: #FFF;
+                padding: 0 4px 0 4px;
+                border: 1px solid rgba(7,7,7,0.2);
+        }
+
+.val {
+                font-size: 0.9em;
+                padding: 0 4px 0 4px;
+                background-color: #fd0;
+                border: 1px solid rgba(7,7,7,0.2);
+        }
+
+.title {
+                left: 10px;
+                text-align: center;
+                font-size: 1em;
+                position: relative;
+        }
+.wynik{
+                text-align: left;
+                position: relative; left: 2px;
+}

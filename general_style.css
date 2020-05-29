@@ -1,0 +1,28 @@
+input{
+                -box-shadow: 1px 1px 1px #777;
+                width: 200px;
+        }
+body{
+    background-color: azure;
+    margin: 0px;
+}
+input[type=text]{
+                width: 100px;
+                text-align: center;
+                background: transparent;
+                border-top-style: hidden; 										
+                border-right-style: hidden; 									
+                border-left-style: hidden; 										
+                border-bottom-style: hidden;
+                font-family: 'Roboto', sans-serif;
+                font-size:18px;
+            }
+p{
+                text-align: justify;
+                font-family: 'Roboto', sans-serif;
+                font-size:16px;
+}
+ul{
+                font-family: 'Roboto', sans-serif;
+                font-size:16px;
+}
